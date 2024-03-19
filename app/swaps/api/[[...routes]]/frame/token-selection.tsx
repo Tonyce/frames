@@ -7,11 +7,17 @@ import { CustomFrameContext } from ".";
 
 export const assets = [
   {
-    name: "$HIGHER",
+    name: "$SENDIT",
     network: "base",
-    image: "https://i.imgur.com/bdQcnVI.png",
-    address: "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe",
+    image: "https://i.imgur.com/iQLxGMj.png",
+    address: "0xBa5B9B2D2d06a9021EB3190ea5Fb0e02160839A4",
   },
+  // {
+  //   name: "$HIGHER",
+  //   network: "base",
+  //   image: "https://i.imgur.com/bdQcnVI.png",
+  //   address: "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe",
+  // },
   {
     name: "$DEGEN",
     network: "base",
