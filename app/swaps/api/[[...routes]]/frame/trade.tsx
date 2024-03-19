@@ -43,9 +43,7 @@ export const tradeScreen = async (c: CustomFrameContext) => {
       <Button.Transaction target={`/tx?network=${network}&token=${token}`}>
         Buy
       </Button.Transaction>,
-      <Button.Link href={`https://matcha.xyz/tokens/${network}/${token}`}>
-        Sell
-      </Button.Link>,
+      <Button.Link href={`https://u3.xyz`}>Visit U3</Button.Link>,
     ],
   });
 };
