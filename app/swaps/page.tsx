@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 export async function generateMetadata(): Promise<Metadata> {
   const metadataPage = `${process.env.WEBSITE_URL}/swaps/api`;
   const frameTags = await getFrameMetadata(metadataPage);
-  console.log("metadataPage", metadataPage);
-  console.log("frameTags", frameTags);
+  // console.log("metadataPage", metadataPage);
+  // console.log("frameTags", frameTags);
   return {
     other: frameTags,
   };
