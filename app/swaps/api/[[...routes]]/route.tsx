@@ -12,11 +12,6 @@ const app = new Frog({
   hub: pinata(),
 });
 
-// Uncomment to use Edge Runtime
-// export const runtime = 'edge'
-
-// app.frame("/", start);
-
 app.route("/", swapFrame);
 
 export const GET = handle(app);
