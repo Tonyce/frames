@@ -23,6 +23,9 @@ export const app = new Frog<FrogOptions>({
     const inter = await getFont("inter");
     return { fonts: [gilroy, inter] };
   },
+  headers: {
+    "Cache-Control": "public, max-age=3600",
+  },
 });
 
 app.frame("/", start);

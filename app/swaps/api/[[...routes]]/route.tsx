@@ -10,6 +10,9 @@ const app = new Frog({
   assetsPath: "/",
   basePath: "/swaps/api",
   hub: pinata(),
+  headers: {
+    "cache-control": "public, max-age=3600",
+  },
 });
 
 app.route("/", swapFrame);
