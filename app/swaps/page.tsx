@@ -5,6 +5,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const frameTags = await getFrameMetadata(
     `${process.env.VERCEL_URL}/swaps/api`
   );
+  console.log("frameTags", frameTags);
   return {
     other: frameTags,
   };
