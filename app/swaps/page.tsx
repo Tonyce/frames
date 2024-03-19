@@ -2,7 +2,7 @@ import { getFrameMetadata } from "frog/next";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metadataPage = `${process.env.VERCEL_URL}/swaps/api`;
+  const metadataPage = `${process.env.WEBSITE_URL}/swaps/api`;
   const frameTags = await getFrameMetadata(metadataPage);
   console.log("metadataPage", metadataPage);
   console.log("frameTags", frameTags);

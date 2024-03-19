@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
   const frameTags = await getFrameMetadata(
-    `${process.env.VERCEL_URL || "http://localhost:3000"}/tips/api`
+    `${process.env.WEBSITE_URL}/tips/api`
   );
   return {
     other: frameTags,
