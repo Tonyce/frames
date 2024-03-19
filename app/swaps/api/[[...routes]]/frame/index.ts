@@ -8,14 +8,16 @@ import { tradeScreen } from "./trade";
 import { tokenSelectionScreen } from "./token-selection";
 
 type FrogOptions = {
-  Bindings: { ZEROX_API_KEY?: string };
+  Bindings: {
+    API_KEY_0X_API_KEY: string;
+  };
 };
 
 export type CustomFrameContext = FrameContext<FrogOptions>;
 export type CustomTransactionContext = TransactionContext<FrogOptions>;
 
 export const app = new Frog<FrogOptions>({
-  browserLocation: "/swaps",
+  // browserLocation: "/swaps",
   imageOptions: async () => {
     const gilroy = await getFont("gilroy");
     const inter = await getFont("inter");
