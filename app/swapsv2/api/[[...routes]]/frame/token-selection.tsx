@@ -105,7 +105,7 @@ export const tokenSelectionScreen = (c: CustomFrameContext) => {
       </div>
     ),
     intents: [
-      <TextInput placeholder="Pick the token number that you want buy" />,
+      <TextInput placeholder="Pick the token number" />,
       <Button action={`/selected-token`}>Select</Button>,
     ],
   });
