@@ -51,6 +51,12 @@ export const assets = [
       "https://pbs.twimg.com/profile_images/1549962330368270336/Ymfk7XtM_400x400.jpg",
     address: "0xAfb89a09D82FBDE58f18Ac6437B3fC81724e4dF6",
   },
+  {
+    name: "$TYBG",
+    network: "base",
+    image: "https://i.imgur.com/f7hdfZK_d.webp?maxwidth=760&fidelity=grand",
+    address: "0x0d97F261b1e88845184f678e2d1e7a98D9FD38dE",
+  },
 ];
 
 export const tokenSelectionScreen = (c: CustomFrameContext) => {
@@ -102,7 +108,16 @@ export const tokenSelectionScreen = (c: CustomFrameContext) => {
             </div>
           ))}
         </div>
-        <div>0 will be default if the number not exist</div>
+        <div
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            left: "20px",
+            fontSize: "30px",
+          }}
+        >
+          0 will be default if the number not exist
+        </div>
       </div>
     ),
     intents: [

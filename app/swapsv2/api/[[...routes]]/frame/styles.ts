@@ -12,6 +12,7 @@ export const backgroundStyles: Hono.CSSProperties = {
   width: "100%",
   height: "100%",
   fontFamily: "inter",
+  position: "relative",
 };
 
 export const titleStyles: Hono.CSSProperties = {
