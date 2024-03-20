@@ -48,5 +48,8 @@ export const finish = async (c: FrameContext) => {
         <span style={titleStyles}>Thanks for Playing</span>
       </div>
     ),
+    intents: [
+      <Button.Link href="https://degencast.xyz">Visit Degencast</Button.Link>,
+    ],
   });
 };
