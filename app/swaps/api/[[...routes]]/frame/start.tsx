@@ -2,7 +2,6 @@
 
 import { Button, Frog, TextInput } from "frog";
 import { backgroundStyles, titleStyles } from "./styles";
-import { CustomFrameContext } from ".";
 import { assets } from "./token-selection";
 
 export function start(c: any) {
