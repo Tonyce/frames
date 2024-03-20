@@ -54,7 +54,7 @@ export const assets = [
   {
     name: "$TYBG",
     network: "base",
-    image: "https://i.imgur.com/f7hdfZK_d.webp?maxwidth=760&fidelity=grand",
+    image: "https://basescan.org/token/images/basegodfun_32.png",
     address: "0x0d97F261b1e88845184f678e2d1e7a98D9FD38dE",
   },
 ];
