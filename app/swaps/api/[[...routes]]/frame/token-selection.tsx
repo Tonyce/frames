@@ -7,23 +7,23 @@ import { CustomFrameContext } from ".";
 
 export const assets = [
   {
-    name: "$SENDIT",
-    network: "base",
-    image: "https://i.imgur.com/iQLxGMj.png",
-    address: "0xBa5B9B2D2d06a9021EB3190ea5Fb0e02160839A4",
-  },
-  // {
-  //   name: "$HIGHER",
-  //   network: "base",
-  //   image: "https://i.imgur.com/bdQcnVI.png",
-  //   address: "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe",
-  // },
-  {
     name: "$DEGEN",
     network: "base",
     image:
       "https://pbs.twimg.com/profile_images/1751028059325501440/9jrvP_yG_400x400.jpg",
     address: "0x4ed4e862860bed51a9570b96d89af5e1b0efefed",
+  },
+  {
+    name: "$SENDIT",
+    network: "base",
+    image: "https://i.imgur.com/iQLxGMj.png",
+    address: "0xBa5B9B2D2d06a9021EB3190ea5Fb0e02160839A4",
+  },
+  {
+    name: "$HIGHER",
+    network: "base",
+    image: "https://i.imgur.com/bdQcnVI.png",
+    address: "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe",
   },
 ];
 

@@ -25,7 +25,7 @@ export const finish = async (c: FrameContext) => {
   const { castId, fid, messageHash, network, timestamp, url } = frameData;
 
   const hasFollowed = await getFollowedFromFidToTargetFid(fid, 7061);
-  console.log("hasFollowed", hasFollowed);
+  // console.log("hasFollowed", hasFollowed);
   if (!hasFollowed) {
     return c.res({
       image: <div style={backgroundStyles}>Follow first</div>,
@@ -37,10 +37,14 @@ export const finish = async (c: FrameContext) => {
   }
 
   const addresses = await getAddressFromFid(fid);
-
   const { ethAddress, solAddress } = addresses;
-  console.log({ fid, ethAddress, solAddress });
+
   // POST to API Server to save the address
+  await saveSubscription({
+    fid,
+    evmPubkey: ethAddress,
+    solPubkey: solAddress,
+  });
 
   return c.res({
     image: (
@@ -53,3 +57,31 @@ export const finish = async (c: FrameContext) => {
     ],
   });
 };
+
+async function saveSubscription({
+  fid,
+  evmPubkey,
+  solPubkey,
+}: {
+  fid: number;
+  evmPubkey: string;
+  solPubkey: string;
+}) {
+  const resp = await fetch("https://api-dev.u3.xyz/onboarding/subscribing", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      fid,
+      evmPubkey,
+      solPubkey,
+    }),
+  });
+
+  const data = await resp.json();
+  if (data.code !== 0) {
+    throw new Error(data.msg);
+  }
+}
+//https://api-dev.u3.xyz/onboarding/subscribers
