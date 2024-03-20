@@ -20,6 +20,8 @@ export const selectedToken = async (c: CustomFrameContext) => {
 
   const token = assets[numberSelect].address;
 
+  console.log("token address", token);
+
   const symbol = await baseClient.readContract({
     address: token as `0x`,
     abi: parseAbi(["function symbol() view returns (string)"]),
@@ -42,7 +44,7 @@ export const selectedToken = async (c: CustomFrameContext) => {
       <Button.Transaction target={`/tx?network=${network}&token=${token}`}>
         Buy
       </Button.Transaction>,
-      <Button.Link href={`https://u3.xyz`}>Visit U3</Button.Link>,
+      <Button action="/token-selection">Back</Button>,
     ],
   });
 };
