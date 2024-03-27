@@ -57,6 +57,18 @@ export const assets = [
     image: "https://basescan.org/token/images/basegodfun_32.png",
     address: "0x0d97F261b1e88845184f678e2d1e7a98D9FD38dE",
   },
+  {
+    name: "$FrameToken",
+    network: "base",
+    image: "https://i.imgur.com/F055TuI.png",
+    address: "0x91F45aa2BdE7393e0AF1CC674FFE75d746b93567",
+  },
+  {
+    name: "$TICKER",
+    network: "base",
+    image: "https://i.imgur.com/Io6LNLy.jpeg",
+    address: "0xa0c05e2EeD05912D9Eb76d466167628E8024a708",
+  },
 ];
 
 export const tokenSelectionScreen = (c: CustomFrameContext) => {
