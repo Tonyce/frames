@@ -106,7 +106,7 @@ export async function check(c: any) {
     intents: [
       <TextInput placeholder="amount of unit, default 1" />,
       <Button action="/">Back</Button>,
-      <Button action="/tx">Buy More</Button>,
+      <Button.Transaction target="/rent">Buy More</Button.Transaction>,
     ],
   });
 }
